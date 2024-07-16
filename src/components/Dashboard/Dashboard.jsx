@@ -45,10 +45,10 @@ const Dashboard = () => {
       setIsBreak(!isbreak);
 
       if (isbreak) {
-        setTimeLeft(25 * 60); 
+        setTimeLeft(25 * 60);
         setIsActive(false);
       } else {
-        setTimeLeft(5 * 60); 
+        setTimeLeft(5 * 60);
       }
     }
 
@@ -90,22 +90,22 @@ const Dashboard = () => {
     <>
 
 
-      <div className='dashboard'>
+      <div className='dashboard flex justify-center items-center h-screen w-full flex-col bg-red-200'>
         {
-          isUser && <div className="dashboard-main">
-            <div className="nav">
-              <button onClick={logout}>Logout</button>
+          isUser && <div className="dashboard-main w-screen h-screen rounded-xl shadow-md">
+            <div className=" w-screen flex items-center justify-end h-16 p-12">
+              <button onClick={logout} className=' w-24 h-8 rounded-full cursor-pointer bg-slate-900 text-white'>Logout</button>
             </div>
 
-            <div className="timer">
-              {isbreak && <p>Break time</p>}
-              <h1>{formatTime(timeLeft)}</h1>
-              
+            <div className="timer w-2/4 h-80 rounded-xl shadow-2xl my-16 mx-auto flex items-center justify-evenly flex-col">
+              {isbreak && <p className='text-2xl font-bold'>Break time</p>}
+              <h1 className='text-6xl font-bold'>{formatTime(timeLeft)}</h1>
+
               {!isbreak && <div className="btns">
 
-                <button onClick={startTimer} >Start</button>
-                <button onClick={stopTimer} >Stop</button>
-                <button onClick={resetTimer}>Reset</button>
+                <button className='w-32 h-10 rounded-lg border-0 bg-slate-950 text-white m-2 curser-pointer shadow-md' onClick={startTimer} >Start</button>
+                <button className='w-32 h-10 rounded-lg border-0 bg-slate-950 text-white m-2 curser-pointer shadow-md' onClick={stopTimer} >Stop</button>
+                <button className='w-32 h-10 rounded-lg border-0 bg-slate-950 text-white m-2 curser-pointer shadow-md' onClick={resetTimer}>Reset</button>
               </div>
               }
             </div>
@@ -113,7 +113,7 @@ const Dashboard = () => {
         }
 
         {
-          !isUser && <div className='login-fst'>
+          !isUser && <div className='login-fst flex items-center justify-center text-4xl h-1/2 fontw'>
             <h3>Please login first</h3>
           </div>
         }
