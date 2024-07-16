@@ -78,7 +78,7 @@ const LoginPage = () => {
 
                 !isUser && <div className="form-main flex flex-col items-center justify-center relative  w-2/5 h-96 rounded-2xl border-2 border-white/60 py-8">
 
-                    <h1>Login</h1>
+                    <h1 className='text-5xl my-6'>Login</h1>
 
                     <form action='' >
 

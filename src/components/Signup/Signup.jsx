@@ -74,7 +74,7 @@ const Signup = () => {
 
                 !isUser && <div className="form-main flex flex-col items-center justify-center relative w-2/5 h-4/5 rounded-2xl border-2 border-white/60 py-8">
 
-                    <h1>Signup</h1>
+                    <h1 className='text-5xl my-6'>Signup</h1>
 
                     <form action='' >
 
